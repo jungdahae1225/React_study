@@ -1,25 +1,39 @@
+/*eslint-disable*/
 import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import './App.css'
+/* 기본 시작 구조
+function App(){
+  return (
+    <div className="APP">
 
-function App() {
+    </div>
+  )
+}
+*/
+function App(){
+ 
+  let [글제목, 글제목변경] = useState( ['남자코트 추천', '강남 우동맛집', '파이썬 독학'] );
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="black-nav">
+        <div>REACT_STUDY</div>
+      </div>
+      <div className="list">
+        <h3>{ 글제목[0] }</h3>
+        <p>2월 17일 발행</p>
+        <hr/>
+      </div>
+      <div className="list">
+        <h3>{ 글제목[1] }</h3>
+        <p>2월 17일 발행</p>
+        <hr/>
+      </div>
+    ... 기타 내용
     </div>
-  );
+  )
 }
+
 
 export default App;
